@@ -1,0 +1,55 @@
+<ion-header>
+    <ion-navbar no-border-bottom>
+      <ion-title>
+        Segments
+      </ion-title>
+    </ion-navbar>
+  
+    <ion-toolbar no-border-top>
+      <ion-segment [(ngModel)]="typemoney">
+        <ion-segment-button value="income">
+          รายรับ
+        </ion-segment-button>
+        <ion-segment-button value="expense">
+          รายจ่าย
+        </ion-segment-button>
+      
+      </ion-segment>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <div [ngSwitch]="typemoney">
+      <ion-list *ngSwitchCase="'income'">
+          <ion-item>
+              <ion-label color="primary" floating>จำนวนเงิน</ion-label>
+              <ion-input type="text" ></ion-input>
+          </ion-item>
+          <ion-item>
+              <ion-label color="primary" floating>โน๊ต</ion-label>
+              <ion-input type="text" ></ion-input>
+          </ion-item>
+          <ion-item>
+              <ion-input type="date" [></ion-input>
+          </ion-item>
+      </ion-list>
+  
+      <ion-list *ngSwitchCase="'expense'">
+          <ion-item>
+              <ion-label color="danger" floating>จำนวนเงิน</ion-label>
+              <ion-input type="text" ></ion-input>
+          </ion-item>
+          <ion-item>
+              <ion-label color="danger" floating>โน๊ต</ion-label>
+              <ion-input type="text" ></ion-input>
+          </ion-item>
+          <ion-item>
+              <ion-input type="date" ></ion-input>
+          </ion-item>
+      </ion-list>
+    </div>
+    <ion-fab right bottom>
+        
+        <button ion-fab color="danger" (click)="save()"><ion-icon name="md-archive"></ion-icon></button>
+    </ion-fab>
+  </ion-content>

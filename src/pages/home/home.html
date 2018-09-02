@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+    LOGIN PAGE
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h2>กรุณาล๊อกอิน</h2>
+  <div class = "list">
+    <ion-item>
+      <ion-label color="primary" floating>Username</ion-label>
+      <ion-input type="text" #username></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label color="primary" floating >Password</ion-label>
+        <ion-input type="password" #password></ion-input>
+      </ion-item><br><br>
+     
+ </div>
+
+ <div align="center" >
+      <button ion-button round ion-button icon-start (click)="login()">Log-in</button>
+      <button ion-button round ion-button icon-end (click)="GoRegis()">Register</button>
+    </div>
+    
+</ion-content>
